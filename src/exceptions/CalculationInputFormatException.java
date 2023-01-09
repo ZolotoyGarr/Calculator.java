@@ -8,6 +8,7 @@ public class CalculationInputFormatException extends RuntimeException {
         super(message);
     }
 
+
     public CalculationInputFormatException(String message, Throwable cause) {
         super(message, cause);
     }

@@ -12,13 +12,13 @@ public class RomanToIntegerParser implements FormatToIntegerParser {
         try {
             number = Integer.parseInt(input);
         } catch (NumberFormatException NFE) {
-            boolean matchNotFounded = true;
+            boolean matchNotFound = true;
             int i = 0;
-            while (matchNotFounded) {
+            while (matchNotFound) {
                 if (input.equals(romanNumbers[i])) {
                     number = i + 1;
-                    matchNotFounded = false;
-                } else if (i < romanNumbers.length - 1){
+                    matchNotFound = false;
+                } else if (i < romanNumbers.length - 1) {
                     i++;
                 } else {
                     throw new CalculationInputValueException(Messages.FROM_ONE_TO_TEN_MESSAGE.getFullMessage());
